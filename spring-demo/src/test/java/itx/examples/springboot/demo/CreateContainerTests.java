@@ -40,14 +40,14 @@ public class CreateContainerTests {
         restTemplate = new TestRestTemplate();
     }
 
-    @Test
-    public void testCreatedContainer() {
-        Integer port = springDemoContainer.getMappedPort(8081);
-        LOG.info("spring-demo port: {}", port);
-        ResponseEntity<SystemInfo> response = restTemplate.getForEntity(
-                "http://localhost:" + port + "/data/info", SystemInfo.class);
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-    }
+//     @Test
+//     public void testCreatedContainer() {
+//         Integer port = springDemoContainer.getMappedPort(8081);
+//         LOG.info("spring-demo port: {}", port);
+//         ResponseEntity<SystemInfo> response = restTemplate.getForEntity(
+//                 "http://localhost:" + port + "/data/info", SystemInfo.class);
+//         assertEquals(HttpStatus.OK, response.getStatusCode());
+//     }
 
     @AfterAll
     public static void shutdown() {
